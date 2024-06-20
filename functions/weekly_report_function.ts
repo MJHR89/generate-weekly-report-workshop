@@ -4,7 +4,7 @@ import { DefineFunction, Schema, SlackFunction } from "deno-slack-sdk/mod.ts";
 // Function definition
 export const WeeklyReportFunction = DefineFunction({
   callback_id: "weekly_report",
-  title: "generate a weekly update of what happened in Salesforce",
+  title: "Weekly Report",
   description: "pulls Salesforce data to generate an appealing weekly report",
   source_file: "functions/weekly_report_function.ts",
   input_parameters: {
@@ -36,7 +36,7 @@ export default SlackFunction(
   env: access environment variables
   */
   async ({ inputs, env }) => {
-    const SalesforceData = inputs.salesforce_data;
+    const SalesforceData = "<USE THE SALESFORCE DATA FROM THE INPUT PARAMS>";
     let AISummary = "";
 
     try {
